@@ -2,7 +2,7 @@ import {createSlice, nanoid} from '@reduxjs/toolkit'
 
 
 
-const initialState = []
+const initialState = {} ;
 
 
 const dataSlice = createSlice({
@@ -10,7 +10,7 @@ const dataSlice = createSlice({
     initialState,
     reducers:{
         addData(state,action){
-            state.push(action.payload)
+            state.data = action.payload
         }
     }
 })

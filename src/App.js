@@ -1,15 +1,17 @@
 import './App.css';
 
+//pages
+import DashBoard from './pages/Landing'
 
-import Tickers from './components/Tickers'
-import NavBar from './components/Navbar'
+
+
 
 
 function App() {
   return (
     <div className="App">
-
-      <Tickers />
+      
+      <DashBoard />
 
     </div>
   );
