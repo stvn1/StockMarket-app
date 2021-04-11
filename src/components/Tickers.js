@@ -1,12 +1,12 @@
 import React from 'react'
 
-function Login() {
+function Tickers() {
     return (
         <div>
-            <h1>TODO</h1>
+            <h1>TODO TICKERS</h1>
             
         </div>
     )
 }
 
-export default Login
+export default Tickers

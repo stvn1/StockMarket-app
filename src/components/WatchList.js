@@ -1,11 +1,12 @@
 import React from 'react'
 
-function SideBar() {
+function WatchList() {
     return (
         <div>
+            <h1>TODO WATCHLIST</h1>
             
         </div>
     )
 }
 
-export default SideBar
+export default WatchList

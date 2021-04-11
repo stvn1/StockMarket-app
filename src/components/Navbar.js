@@ -2,6 +2,7 @@ import React from 'react'
 
 
 import {useDispatch} from 'react-redux'
+import {useState} from 'react'
 
 import {changeSelection} from '../reducers/selectionReducer'
 
@@ -9,25 +10,30 @@ import {changeSelection} from '../reducers/selectionReducer'
 
 const Navbar = ()=> {
 
+    const [searchText,setSearchText] = useState('')
+
     const dispatch = useDispatch();
 
-    const vodClickButton = () =>{
-        dispatch(changeSelection({selection:"VOD"}))
+    const searchButtonClicked = () =>{
+        dispatch(changeSelection({selection:searchText}))
     }
-    const aaplClickButton = () =>{
-        dispatch(changeSelection({selection:"AAPL"}))
-    }
+
 
 
 
     return (
-        <div>
-           <button onClick={vodClickButton}>
-               VOD
-           </button>
-           <button onClick={aaplClickButton}>
-               AAPL
-           </button>
+        <div className = 'navBar'>
+            <input 
+                className='search' 
+                type='text' 
+                onChange={(e)=>setSearchText(e.target.value)}
+                />
+                <button
+                    onClick={searchButtonClicked}
+                >
+                    Load Ticker
+                </button>
+
             
         </div>
     )
